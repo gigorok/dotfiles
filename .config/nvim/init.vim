@@ -1,76 +1,99 @@
-let g:python_host_prog  = '/usr/bin/python'
+let g:python_host_prog  = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
-set runtimepath+=~/.vim,~/.vim/after
-set packpath+=~/.vim
-
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-unimpaired'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'w0rp/ale' " async linter
-Plug 'chriskempson/base16-vim'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-ruby/vim-ruby'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-surround'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'fishbullet/deoplete-ruby'
-Plug 'SirVer/ultisnips' " snippets supporting
-Plug 'honza/vim-snippets' " snippets collection
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
-Plug 'thinca/vim-textobj-between'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'kchmck/vim-coffee-script'
-Plug 'Valloric/ListToggle'
-Plug 'kshenoy/vim-signature' " Plugin to toggle, display and navigate marks
-Plug 'avakhov/vim-yaml'
-Plug 'vim-scripts/LargeFile'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most
-Plug 'tpope/vim-vinegar' " improved netrw
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-abolish'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'thoughtbot/vim-rspec'
-Plug 'vim-airline/vim-airline'
-Plug 'nelstrom/vim-visual-star-search'
-" Plug 'mhinz/vim-grepper'
-Plug 'tpope/vim-obsession'
-Plug 'schickling/vim-bufonly'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'tpope/vim-dispatch'
-Plug 'radenling/vim-dispatch-neovim'
-Plug 'farmergreg/vim-lastplace'
-Plug 'terryma/vim-smooth-scroll'
-" Plug 'scrooloose/nerdtree'
-Plug 'gregsexton/gitv', {'on': ['Gitv']}
-Plug 'chr4/nginx.vim' " nginx config highlighting
-Plug 'tmux-plugins/vim-tmux-focus-events' " Make terminal vim and tmux work better together
-Plug 'chrisbra/NrrwRgn'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'alvan/vim-closetag'
-Plug 'yggdroot/indentline'
-Plug 'andrewradev/splitjoin.vim'
-Plug 'jreybert/vimagit'
-Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
-call plug#end()
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('jiangmiao/auto-pairs')
+call minpac#add('w0rp/ale')
+call minpac#add('chriskempson/base16-vim')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('vim-ruby/vim-ruby')
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('tpope/vim-rails')
+call minpac#add('tpope/vim-bundler')
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('tpope/vim-surround')
+call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'})
+call minpac#add('SirVer/ultisnips')
+call minpac#add('honza/vim-snippets')
+call minpac#add('kana/vim-textobj-user')
+call minpac#add('kana/vim-textobj-entire')
+call minpac#add('thinca/vim-textobj-between')
+call minpac#add('nelstrom/vim-textobj-rubyblock')
+call minpac#add('kchmck/vim-coffee-script')
+call minpac#add('Valloric/ListToggle')
+call minpac#add('kshenoy/vim-signature')
+call minpac#add('avakhov/vim-yaml')
+call minpac#add('vim-scripts/LargeFile')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-eunuch')
+call minpac#add('tpope/vim-vinegar')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-abolish')
+call minpac#add('bronson/vim-trailing-whitespace')
+call minpac#add('thoughtbot/vim-rspec')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('nelstrom/vim-visual-star-search')
+call minpac#add('tpope/vim-obsession')
+call minpac#add('schickling/vim-bufonly')
+call minpac#add('skywind3000/asyncrun.vim')
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('radenling/vim-dispatch-neovim')
+call minpac#add('farmergreg/vim-lastplace')
+call minpac#add('terryma/vim-smooth-scroll')
+call minpac#add('gregsexton/gitv', {'on': ['Gitv']})
+call minpac#add('chr4/nginx.vim')
+call minpac#add('tmux-plugins/vim-tmux-focus-events')
+call minpac#add('chrisbra/NrrwRgn')
+call minpac#add('pbrisbin/vim-mkdir')
+call minpac#add('terryma/vim-multiple-cursors')
+call minpac#add('alvan/vim-closetag')
+call minpac#add('yggdroot/indentline')
+call minpac#add('andrewradev/splitjoin.vim')
+call minpac#add('jreybert/vimagit')
+call minpac#add('mattn/webapi-vim')
+call minpac#add('mattn/gist-vim')
+call minpac#add('mhinz/vim-grepper')
+call minpac#add('szw/vim-maximizer')
+call minpac#add('mhinz/vim-startify')
+call minpac#add('iamcco/markdown-preview.vim')
+" call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('haya14busa/incsearch.vim')
+call minpac#add('haya14busa/incsearch-fuzzy.vim')
+call minpac#add('easymotion/vim-easymotion')
+call minpac#add('blueyed/vim-diminactive')
 
 nnoremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 nnoremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-" map <C-n> :NERDTreeToggle<CR>
 
-" let g:indentLine_setColors = 0
+map z/ <Plug>(incsearch-fuzzy-/)
 
-set completefunc=syntaxcomplete#Complete
+let g:diminactive_use_colorcolumn = 1
+let g:diminactive_use_syntax = 0
+let g:diminactive_enable_focus = 1
+let g:diminactive_buftype_blacklist = ['nofile', 'nowrite', 'acwrite', 'quickfix', 'help']
+let g:diminactive_filetype_blacklist = ['startify', 'qf']
+
+let g:indentLine_setColors = 0
+" let g:indentLine_bgcolor_term = 18
+" let g:indentLine_color_term = 18
+" let g:indentLine_concealcursor = 'inc'
+" let g:indentLine_conceallevel = 2
+augroup IndentLinesDim
+  autocmd!
+  autocmd WinLeave * :IndentLinesDisable
+  autocmd WinEnter * :IndentLinesEnable
+augroup END
+
+let g:mkdp_auto_close = 0
+
+" set completefunc=syntaxcomplete#Complete
 let g:deoplete#enable_at_startup = 1
 
 " ListToggle settings
@@ -79,6 +102,7 @@ let g:lt_quickfix_list_toggle_map = '<leader>q'
 let g:lt_height = 10
 
 let g:AutoPairsFlyMode = 0
+" let g:AutoPairsShortcutBackInsert = '<leader>b'
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -103,7 +127,7 @@ set hidden
 " Treat .arb files as ruby
 autocmd BufNewFile,BufRead *.html.arb setfiletype ruby
 
-set synmaxcol=500 " to not stuck vim while checking syntax of long lines
+" set synmaxcol=500 " to not stuck vim while checking syntax of long lines
 
 " identation
 set autoindent
@@ -126,8 +150,9 @@ augroup END
 
 nnoremap K :h <C-R>=expand('<cword>')<CR><CR>
 
-let g:gitgutter_async = 1
-let g:gitgutter_terminal_reports_focus=0
+if executable('ag')
+  let g:gitgutter_grep = 'ag'
+endif
 
 let g:closetag_filenames = '*.html,*.html.erb'
 
@@ -144,14 +169,11 @@ set secure
 set splitbelow
 set splitright
 
-" add additional tags files
-set tags+=gems.tags
-
 " FOLDING
 set foldmethod=syntax
 set foldlevel=99
 
-" set updatetime=100 " default is about 4000 miliseconds
+set updatetime=100 " default is about 4000 miliseconds
 
 set noswapfile " disable creation of swap files
 " set directory^=$HOME/.vim/tmp//
@@ -164,8 +186,8 @@ set hlsearch
 set ignorecase
 set smartcase
 set scrolloff=5
-
 set shortmess=atI
+set clipboard+=unnamedplus
 
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
@@ -191,6 +213,10 @@ set completeopt+=longest
 set runtimepath^=~/.vim/plugged/ctrlp.vim
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g "" -U --path-to-ignore ~/.ignore'
+  let g:ctrlp_use_caching = 0
+endif
+if executable('/usr/local/bin/rg')
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
 nnoremap <C-Space> :CtrlPBuffer<CR>
@@ -227,19 +253,17 @@ let g:netrw_fastbrowse = 0
 let g:netrw_bufsettings = 'nomodifiable nomodified number nowrap readonly nobuflisted'
 
 if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor\ --column\ --vimgrep\ --ignore=TAGS\ --case-sensitive
+  set grepprg=ag\ --nogroup\ --nocolor\ --column\ --vimgrep\ --case-sensitive\ --path-to-ignore\ ~/.ignore
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+if executable('/usr/local/bin/rg')
+  set grepprg=rg\ --color=never\ --vimgrep
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 set wildmenu
 set wildmode=list:longest " bash specific
 " set wildignore=log/**,node_modules/**,tmp/**
-
-" use old regex engine to speedup ruby syntax highlighting
-" 2 nfa (new one but slow with ruby ft)
-" 1 old (faster with ruby)
-" 0 auto
-" set regexpengine=1
 
 " do not redraw every macros step
 set lazyredraw
@@ -297,74 +321,43 @@ nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gv :Gitv<CR>
 " nnoremap <C-w>F <C-w>f<C-w>L
 nnoremap <C-b>o :Bonly<CR>
-map g<C-p> :CtrlP<CR><C-\>w
+" map g<C-p> :CtrlP<CR><C-\>w
 nnoremap <nowait> <leader>w :<C-u>write<CR>
-nnoremap <nowait> <leader>u :<C-u>PlugUpdate<CR>
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 
-let s:rails_version = ''
-function! RailsVersion() abort
-  if filereadable('bin/rails')
-    if s:rails_version == ''
-      let cmd_result = system("bin/rails --version")
-      let s:rails_version = join(split(split(cmd_result)[1], "\\.")[0:1], ".")
-    endif
-    return s:rails_version
-  else
-    echohl ErrorMsg | echo 'No rails detected!' | echohl None
-  endif
-endfunction
-
-function! DbTestPrepareCmd() abort
-  if RailsVersion() == '4.2'
-    return "rake db:test:prepare"
-  else
-    return "rails db:test:prepare"
-  endif
-endfunction
-
-nnoremap <localleader>rr :AsyncRun <C-R>=DbTestPrepareCmd()<CR><CR>
+nnoremap <localleader>rr :AsyncRun rails db:test:prepare<CR>
 nnoremap <localleader>ss :AsyncRun spring stop<CR>
 nnoremap <localleader>cc :AsyncRun ctags . $(bundle list --paths)<CR>
 
-let g:rspec_dispatch = 1
 " spring detection
 function! RSpecCmd() abort
   if filereadable('bin/rspec')
-    return '!bin/rspec {spec} --fail-fast'
+    return 'Dispatch bin/rspec {spec} --fail-fast'
   else
-    return '!rspec {spec} --fail-fast'
+    return 'Dispatch rspec {spec} --fail-fast'
   endif
 endfunction
-function! RSpecDispatchCmd() abort
-  if g:rspec_dispatch
-    return 'Dispatch ' . substitute(RSpecCmd(), '^!', '', '')
-  else
-    return RSpecCmd()
-  endif
-endfunction
-function! ReloadRSpecCmd() abort
-  let g:rspec_command = RSpecDispatchCmd()
-endfunction
-call ReloadRSpecCmd() " initialize rspec cmd
-function! ToggleRspecDispatch() abort
-  let g:rspec_dispatch = 1 - g:rspec_dispatch
-  echo g:rspec_dispatch
-endfunction
+let g:rspec_command = RSpecCmd()
 " RSpec.vim mappings
-nnoremap <silent> <leader>R :call ReloadRSpecCmd() <BAR> call RunCurrentSpecFile()<CR>
-nnoremap <silent> <leader>r :call ReloadRSpecCmd() <BAR> call RunNearestSpec()<CR>
-nnoremap <silent> <leader>t :call ReloadRSpecCmd() <BAR> call RunLastSpec()<CR>
-nnoremap <silent> <leader>e :call ToggleRspecDispatch()<CR>
+nnoremap <silent> <leader>R :call RunCurrentSpecFile()<CR>
+nnoremap <silent> <leader>r :call RunNearestSpec()<CR>
+nnoremap <silent> <leader>t :call RunLastSpec()<CR>
 
-" Grepper preferences
-" nnoremap <leader>g :Grepper -tool ag<cr>
-" nnoremap <leader>* :Grepper -tool ag -cword<cr>
-nnoremap <leader>g :grep!<Space>""<left>
-nnoremap <leader>* :grep!<Space><C-R>=expand('<cword>')<CR><CR>
-" vnoremap <leader>* :grep!<Space><C-R>=expand('<cword>')<CR><CR>
+" nnoremap <leader>g :Grepper -tool ag -noopen<cr>
+nnoremap <leader>g :grep! ""<left>
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 
-" nmap gs <plug>(GrepperOperator)
-" xmap gs <plug>(GrepperOperator)
+let g:grepper               = {}
+let g:grepper.tools         = ['ag', 'git']
+let g:grepper.highlight     = 1
+let g:grepper.quickfix      = 1
+let g:grepper.ag = {
+      \   'grepprg':    &grepprg,
+      \   'grepformat': &grepformat,
+      \   'escape':     '\^$.*+?()[]{}|'
+      \ }
 
 " manage sessions
 nnoremap <leader>ss :Obsession<CR>
@@ -378,37 +371,26 @@ let g:lasttab = 1
 nmap <leader>tt :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-let s:min_max_toggle = 0
-function! MinMaxWindowToggle()
-  if &ft =~ 'qf\|gitcommit'
-    echoerr 'Maximization not supporting!'
-    return
-  endif
-  if s:min_max_toggle
-    execute "wincmd ="
-    let s:min_max_toggle = 0
-  else
-    execute "wincmd |"
-    execute "wincmd _"
-    let s:min_max_toggle = 1
-  endif
-endfunction
-nnoremap <C-w>m :call MinMaxWindowToggle()<CR>
+let g:maximizer_set_default_mapping = 0
+nnoremap <silent> <C-w>m :MaximizerToggle<CR>
+vnoremap <silent> <C-w>m :MaximizerToggle<CR>gv
 
 nnoremap <leader><leader> :b#<CR>
 
+let g:EasyMotion_do_mapping = 0
+nmap <leader>f <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_smartcase = 1
+
 " autofixes
 iab bb byebug
-iab vpdd VPDD
 
 " paste aligned
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
-let g:asyncrun_status = "stopped"
-let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_powerline_fonts = 1
 
 autocmd FileType eruby.yaml setlocal commentstring=#\ %s
 
@@ -432,9 +414,3 @@ command! -nargs=1 -complete=file EV call EditLine(<q-args>, 'vsplit')
 command! -nargs=1 -complete=file ES call EditLine(<q-args>, 'split')
 command! -nargs=1 -complete=file ET call EditLine(<q-args>, 'tabedit')
 command! -nargs=0 SourceTree AsyncRun /Applications/SourceTree.app/Contents/MacOS/Sourcetree ./
-
-function! ResolveIssue() abort
-  system("worktree resolve_issue " . getcwd())
-endfunction
-
-set clipboard+=unnamedplus
