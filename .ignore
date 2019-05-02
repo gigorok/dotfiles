@@ -1,5 +1,6 @@
-/tmp/
+/tmp/*
 .DS_Store
 .git
 /log/*.log
 /tags
+Session.vim

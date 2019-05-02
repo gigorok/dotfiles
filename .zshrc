@@ -55,8 +55,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 plugins=(git ruby rails history-substring-search vi-mode tmux)
 
@@ -80,7 +80,7 @@ bindkey '^x^e' edit-command-line
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -110,3 +110,7 @@ export GPG_TTY=$(tty)
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:/usr/local/Cellar/imagemagick@6/6.9.10-8/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='/usr/local/bin/rg --hidden --sort-files --files --color=never --glob "" --no-ignore-vcs --ignore-file=$HOME/.ignore'
